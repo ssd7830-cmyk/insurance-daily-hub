@@ -1,0 +1,25 @@
+{
+  "name": "insurance-daily-news-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "보험설계사용 데일리 뉴스 대시보드 (서버리스/무DB, 정적 JSON)",
+  "scripts": {
+    "collect": "node scripts/collect.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "rss-parser": "^3.13.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}

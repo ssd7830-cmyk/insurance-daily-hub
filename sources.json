@@ -1,0 +1,51 @@
+{
+  "_comment": "2026-06-16 실제 fetch 검증 완료. weight: 보험 전문지일수록 높음(큐레이션 점수 가중). 비보험 경제지는 보험 키워드 필터 후 사용.",
+  "feeds": [
+    {
+      "id": "insnews",
+      "name": "보험신문",
+      "url": "http://www.insnews.co.kr/rss/allArticle.xml",
+      "type": "insurance",
+      "weight": 1.0,
+      "verified": "2026-06-16"
+    },
+    {
+      "id": "fins",
+      "name": "한국금융신문",
+      "url": "http://www.fins.co.kr/rss/allArticle.xml",
+      "type": "finance",
+      "weight": 0.9,
+      "verified": "2026-06-16"
+    },
+    {
+      "id": "yna-econ",
+      "name": "연합뉴스 경제",
+      "url": "https://www.yna.co.kr/rss/economy.xml",
+      "type": "economy",
+      "weight": 0.6,
+      "verified": "2026-06-16"
+    },
+    {
+      "id": "hankyung-finance",
+      "name": "한국경제 금융",
+      "url": "https://www.hankyung.com/feed/finance",
+      "type": "finance",
+      "weight": 0.7,
+      "verified": "2026-06-16"
+    },
+    {
+      "id": "edaily-econ",
+      "name": "이데일리 경제",
+      "url": "https://rss.edaily.co.kr/economy_news.xml",
+      "type": "economy",
+      "weight": 0.6,
+      "verified": "2026-06-16"
+    }
+  ],
+  "insurance_keywords": [
+    "보험", "생명보험", "손해보험", "실손", "실비", "암보험", "연금", "변액",
+    "보장", "설계사", "GA", "보험금", "보험료", "약관", "갱신", "비갱신",
+    "금감원", "보험연구원", "생보", "손보", "재보험", "방카", "텔레마케팅",
+    "건강보험", "치매보험", "종신", "정기보험", "IFRS17", "킥스", "K-ICS"
+  ]
+}
