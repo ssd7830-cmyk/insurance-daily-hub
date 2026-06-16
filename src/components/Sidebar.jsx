@@ -2,7 +2,9 @@ import { CAT_META, prettyDate } from '../lib/ui.js'
 
 export const MENU = [
   { key: 'news', icon: '📰', label: '데일리뉴스' },
+  { key: 'coverage', icon: '🩺', label: '보장분석' },
   { key: 'tools', icon: '🧮', label: '상담 계산기' },
+  { key: 'clients', icon: '👥', label: '고객관리' },
   { key: 'scrap', icon: '⭐', label: '내 스크랩' },
 ]
 

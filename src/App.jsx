@@ -5,6 +5,8 @@ import NewsCard from './components/NewsCard.jsx'
 import MethodologyModal from './components/MethodologyPanel.jsx'
 import Tools from './components/Tools.jsx'
 import ScrapView from './components/ScrapView.jsx'
+import CoverageAnalysis from './components/CoverageAnalysis.jsx'
+import Clients from './components/Clients.jsx'
 import { CAT_META, prettyDate } from './lib/ui.js'
 import { useScraps } from './lib/storage.js'
 
@@ -83,7 +85,9 @@ export default function App() {
             {view === 'news' && <p className="mt-0.5 text-sm text-slate-400">{prettyDate(data.date)} · 큐레이션 {shown.length}건</p>}
           </div>
 
+          {view === 'coverage' && <CoverageAnalysis />}
           {view === 'tools' && <Tools />}
+          {view === 'clients' && <Clients />}
           {view === 'scrap' && <ScrapView scraps={scraps} {...scrapProps} />}
           {view === 'news' && (
             <div className="px-5 pb-16 pt-4 lg:px-8">
@@ -115,11 +119,11 @@ export default function App() {
 function MobileNav({ view, onView, scrapCount, dates, dateIndex, onDate, origin, onOrigin, originCounts, category, onCategory, catCounts, total, onOpenMethod }) {
   return (
     <div className="border-b border-slate-200 bg-white px-4 py-3 lg:hidden">
-      {/* 메뉴 탭 */}
-      <div className="mb-2.5 grid grid-cols-3 gap-1.5">
+      {/* 메뉴 탭 (가로 스크롤) */}
+      <div className="-mx-4 mb-2.5 flex gap-1.5 overflow-x-auto px-4">
         {MENU.map((m) => (
           <button key={m.key} onClick={() => onView(m.key)}
-            className={`rounded-xl px-2 py-2 text-sm font-bold ${view === m.key ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600'}`}>
+            className={`whitespace-nowrap rounded-xl px-3 py-2 text-sm font-bold ${view === m.key ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600'}`}>
             {m.icon} {m.label}{m.key === 'scrap' && scrapCount > 0 ? ` ${scrapCount}` : ''}
           </button>
         ))}
